@@ -1,0 +1,146 @@
+[
+  {
+    "title": "Odd or Even",
+    "difficulty": "Hard",
+    "topic": "Conditionals",
+    "description": "Given an integer N, determine whether it is Odd or Even. Return \"Even\" if divisible by 2, otherwise return \"Odd\"."
+  },
+  {
+    "title": "Days to Weeks and Days",
+    "difficulty": "Easy",
+    "topic": "Basics",
+    "description": "Given an integer N representing days, convert it into number of complete weeks and remaining days."
+  },
+  {
+    "title": "ASCII to Integer",
+    "difficulty": "Easy",
+    "topic": "Strings",
+    "description": "Given a character ch, return its ASCII value as an integer."
+  },
+  {
+    "title": "Factorial of Number",
+    "difficulty": "Hard",
+    "topic": "Loops",
+    "description": "Given a non-negative integer n, return n factorial (n!)."
+  },
+  {
+    "title": "Nth Fibonacci Number",
+    "difficulty": "Hard",
+    "topic": "Loops",
+    "description": "Given an integer n, return the nth Fibonacci number where F(n)=F(n-1)+F(n-2)."
+  },
+  {
+    "title": "Check Prime Number",
+    "difficulty": "Hard",
+    "topic": "Loops",
+    "description": "Given an integer n, determine whether it is a prime number and return true or false."
+  },
+  {
+    "title": "Add Two Arrays With Different Lengths",
+    "difficulty": "Medium",
+    "topic": "Arrays",
+    "description": "Given two arrays of possibly different lengths, return a new array representing their element-wise sum. Missing elements are treated as 0."
+  },
+  {
+    "title": "Right-Angle Star Triangle",
+    "difficulty": "Hard",
+    "topic": "Loops",
+    "description": "Given an integer n, print a right-angled triangle of stars with height n."
+  },
+  {
+    "title": "Age Category with Validation",
+    "difficulty": "Hard",
+    "topic": "Conditionals",
+    "description": "Given an integer age, return Child, Teen, Adult, Senior or Invalid Age based on given ranges."
+  },
+  {
+    "title": "Difference of Two Numbers",
+    "difficulty": "Easy",
+    "topic": "Math",
+    "description": "Given two integers a and b, return the absolute difference |a - b|."
+  },
+  {
+    "title": "Palindrome Number",
+    "difficulty": "Hard",
+    "topic": "Loops",
+    "description": "Given an integer x, return true if it is a palindrome, otherwise false."
+  },
+  {
+    "title": "Reverse Integer",
+    "difficulty": "Hard",
+    "topic": "Loops",
+    "description": "Given a signed 32-bit integer x, return the reversed integer. Return 0 if it overflows."
+  },
+  {
+    "title": "Swap Two Numbers Without Temporary Variable",
+    "difficulty": "Medium",
+    "topic": "Basics",
+    "description": "Given two integers a and b, swap their values without using a temporary variable."
+  },
+  {
+    "title": "Hello + Name",
+    "difficulty": "Easy",
+    "topic": "Strings",
+    "description": "Read a name and print the word \"Hello\" followed by a space and the given name."
+  },
+  {
+    "title": "Average of N Numbers",
+    "difficulty": "Hard",
+    "topic": "Loops",
+    "description": "Given n numbers, compute and print their average."
+  },
+  {
+    "title": "Largest of Two Numbers",
+    "difficulty": "Hard",
+    "topic": "Conditionals",
+    "description": "Given two integers, print the largest number. If equal, print that number."
+  },
+  {
+    "title": "Largest of Three Numbers",
+    "difficulty": "Hard",
+    "topic": "Conditionals",
+    "description": "Given three integers, determine and print the largest among them."
+  },
+  {
+    "title": "Print All Elements of an Array",
+    "difficulty": "Hard",
+    "topic": "Loops",
+    "description": "Given an array of integers, print all elements in the same order separated by spaces."
+  },
+  {
+    "title": "Print First 10 Odd Numbers",
+    "difficulty": "Hard",
+    "topic": "Loops",
+    "description": "Print the first 10 positive odd numbers starting from 1."
+  },
+  {
+    "title": "Print First 10 Even Numbers",
+    "difficulty": "Hard",
+    "topic": "Loops",
+    "description": "Print the first 10 positive even numbers starting from 2."
+  },
+  {
+    "title": "Check Positive, Negative, or Zero",
+    "difficulty": "Hard",
+    "topic": "Conditionals",
+    "description": "Given an integer, determine whether it is Positive, Negative, or Zero."
+  },
+  {
+    "title": "Check Leap Year",
+    "difficulty": "Hard",
+    "topic": "Conditionals",
+    "description": "Given a year, determine whether it is a Leap Year based on divisibility rules."
+  },
+  {
+    "title": "Number Triangle Pattern",
+    "difficulty": "Hard",
+    "topic": "Loops",
+    "description": "Given an integer N, print a right-angled number triangle from 1 to N."
+  },
+  {
+    "title": "Square of a Number",
+    "difficulty": "Easy",
+    "topic": "Math",
+    "description": "Given an integer N, print the square of the number (N × N)."
+  }
+]
