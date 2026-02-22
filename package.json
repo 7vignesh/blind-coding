@@ -10,13 +10,17 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": ["onStartupFinished"],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "blindcoding.generateQuestion",
         "title": "Generate Blind Coding Question"
+      },
+      {
+        "command": "blindcoding.showQuestions",
+        "title": "Blind Coding: Show Questions"
       }
     ]
   },
