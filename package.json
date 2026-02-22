@@ -3,6 +3,7 @@
   "displayName": "blind-coding",
   "description": "",
   "version": "0.0.1",
+  "publisher": "vignesh-dev",
   "engines": {
     "vscode": "^1.109.0"
   },
