@@ -501,12 +501,24 @@ async function openCodingView(q: Question, context: vscode.ExtensionContext, onS
 
 export function activate(context: vscode.ExtensionContext) {
   let currentPanel: vscode.WebviewPanel | undefined;
-  let currentQuestions: Question[] = [];
-  const submittedTitles = new Set<string>();
+
+  // ── Restore persisted state (survives restarts, cleared on uninstall) ──
+  const persistedTitles: string[] = context.globalState.get('submittedTitles', []);
+  const submittedTitles = new Set<string>(persistedTitles);
+
+  // Always give the same 5 questions for the session (persist across restarts)
+  let currentQuestions: Question[] = context.globalState.get('assignedQuestions', []);
+  if (currentQuestions.length === 0) {
+    // First install or after uninstall → assign fresh questions
+    currentQuestions = selectQuestions();
+    context.globalState.update('assignedQuestions', currentQuestions);
+  }
+
+  function saveSubmitted() {
+    context.globalState.update('submittedTitles', [...submittedTitles]);
+  }
 
   function showPanel() {
-    currentQuestions = selectQuestions();
-
     if (currentPanel) {
       currentPanel.webview.html = getWebviewHtml(currentQuestions, submittedTitles);
       currentPanel.reveal();
@@ -529,6 +541,7 @@ export function activate(context: vscode.ExtensionContext) {
           if (!q || submittedTitles.has(q.title)) { return; }
           await openCodingView(q, context, (title) => {
             submittedTitles.add(title);
+            saveSubmitted();
             // Push the lock update to the questions panel immediately
             currentPanel?.webview.postMessage({ type: 'markSubmitted', title });
           });
@@ -541,10 +554,10 @@ export function activate(context: vscode.ExtensionContext) {
     currentPanel.onDidDispose(() => { currentPanel = undefined; }, null, context.subscriptions);
   }
 
-  // Show the questions panel on activation
+  // Show the questions panel on activation (install / restart)
   showPanel();
 
-  // Command: re-open / refresh the panel
+  // Command: re-open the panel
   context.subscriptions.push(
     vscode.commands.registerCommand('blindcoding.showQuestions', showPanel)
   );
@@ -569,4 +582,7 @@ export function activate(context: vscode.ExtensionContext) {
   );
 }
 
-export function deactivate() {}
+export function deactivate() {
+  // globalState is automatically persisted by VS Code.
+  // On uninstall VS Code clears globalState, so reinstall always starts fresh.
+}
